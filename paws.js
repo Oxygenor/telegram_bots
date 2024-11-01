@@ -1,7 +1,39 @@
+// Config Server
+
+const http = require('http');
+const port = process.env.PORT || 3000;
+
+// Функция обработки запросов
+const requestHandler = (req, res) => {
+    // Отправляем ответ "Hello World!"
+    res.end('Hello World!');
+    // Логируем запрос для отладки
+    console.log('Received a request.');
+};
+
+// Создаем сервер и передаем функцию обработки запросов
+const server = http.createServer(requestHandler);
+
+// Запускаем сервер и выводим сообщение в консоль
+server.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
+
+// Script App
+
+let debug = true;
+
 let users = {
-    AXL: {
-        authorize: 'user=%7B%22id%22%3A684408653%2C%22first_name%22%3A%22AXL%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22AXL_SL%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=1625636399340972122&chat_type=private&start_param=r_957714030&auth_date=1730229579&hash=7d1bb7d031b68df9ccffab58bc3d936ce0e40aa07180f3642110903149e50b07&referrer=',
-        x_recaptcha_key: "03AFcWeA6E9NFV6d1HpCpCtAI_h_5WUJXNpvERPTOxplE0WjlNoxCSRPQoYL_9UajQMjtDnpPgrhIeACap1EB0dPUgmu0AgMF3xGJuyt1isw0qgHsVFLDRqkXmPCWl-lf8tQGRrWH_N33GmEJnrDVAvRHJrHb1_YcYNZ5BmGARJDX0-5uCmgoaS01WSHMimKeLoluFCKfSZW1v9qMx-DgFRYu-J-F0_YT9qpWh6Zg59VI3_rsk2U6jerRZE8Enquvr6i7ahCrQqdlBO9-OqrsC2teGvWuuLLRsoqS-Vq4RSNhzP_kX28UF-Xa2oNuZ40-2Ym4qbs0kKkHy4MG4pUvN1HkNv_udZHYjIMFcgqB1WqjYJadZZj7x76RuvwxvhF_pH9xw29D4LL0IFYC0GXpFvXuN5TbdI3DRXJGfJaOGvcHV6v1WJlgGWXHUMb8JOWcS7h3eNfyGx4U9nvrhBwVUXR8txI02i4ooG77ABR_8QP74sRQ8NoURzT4fm-8Z8fjcCQ8opao35ORGzmOPYgtVTS2UG4LPnYJ7nz1wgpPWlMHbVHI_grEj2YXb9qD-6uSj9_XJ5Pxg8g4-w0Q8ndiodAiUPbmjqPPIjmB4RqqzrWapM9w0817fuGpwOZNhdSLsUiEph9NfzrVW5gee4p09jlxB1Lj7D_6lowKDzb25pLY2em27YaqqVqaxQSRhR5upzc3C7fXyiLZRlSt96YRCoekIH8CFl5j94L2bsvWXIu5_8wlY1-Ce5d2OjnPm4YwhmZzcS95lnIbkSqWefz1MWLwwx15Awg2twvzGIs2g4-RkQ949fpaCwdbEahVuft3mP9pY0Dd8kTSghsDE0zIH_IyiDKp1PZzZ7-x1RlP8MMmkbaeiVLJab1U7scqhcjc4txRuBv2zSTHabAQ_gz6l_n-U6JwXK3PgqTctS7fpCPDHHnW5pUdA_YZPv2hHo1rjNMk5_uW9S_YcCIUmyXWn12Q9t4Pt8AI8HXugwLk1wkFpq2Q9XuevkrjRvO_XYaZlyvrwDQ9GNViCU773tbkEqCaRNjOWqmw7kmSWdAGkxs_fGdRTo6vTGEdgBG7Npbvr8ghW--zX3gaSIYsLUWAjn5R_ZCKVgHx1SqpV3Cb-8ADMbPBtpU23hWC4cXWi_AO5LAotKUAUUI0Mdq4GxkqwD5jWY7ZKTjf0Y1D4Nxrm7soherQ0xRqwHjFq9eQC-RpY0UVok3GjGNuYsWUsbjIdW3jq4n9iUyhpmbnPsUIcfC2r0gItlCRq67khrbP26AX-0hcKqbn4SFbskxd2-7J3VA_Q4puOAkHXqrYBcVWrM1mvVCMA8Rw8Byx1VN8TCiTMh2MhOV5koT9XO3hHo_2s-NLQiufIotC_9ufaAgL4i-iVNC4d8_-PLvs8dNxfe27m_cmHropHcEe4lmodRtmdzCUjMrXKJEKl4ta68Wg9jOZg4t-WD7p_UNUzfsdxYSdZp2fxiTCpZ9pluhwZIktwpN1X__Iev3BoIHcEhdHhdxwZhXxP903LcXVeYzHdL3r8B7mgm02UxWkpyZeKWkocWHHl8OndGCAHdz-RzSzrEm_nbs3nmWiJ_Z68Qrvpyrpz8tpc2HYwXFGpv99H07MBjRj8-3AIzA3iCCA6AB-spx51yay3nRKJB89yPrPkFbKl6AhRVChBZ7RmSosVbRK0qXKHtM0FoZ1dxLO9nHGeEJUIaE7RnAcN61k3Ln74QjlQqbbg5xRS7rOQzs5iP3bzoy0yUoaYTLwcZG6rN91PO9F-Cq9HssvsYOHjKAtLWTejb_hepP8qPLVQztCH7JZt4tPA0oTtskbD5d7HUC32M91rlhznVxB6G60udIYbD7WB-wf_dmxpN3zZFvSyA-B08zPYiqTcgiB5ykvazgfW0C0cpTzVCb-mvXHycdsyMfXFjmcWDgk90rxdeIa7spJOYBSgxIrar1AKomZC12U2N20TU05ET5JXV8c"
+    // AXL: {
+    //     authorize: 'query_id=AAFNP8soAAAAAE0_yyiM5pBM&user=%7B%22id%22%3A684408653%2C%22first_name%22%3A%22AXL%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22AXL_SL%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&auth_date=1730440649&hash=f921f135cecbb54a897cefd665ca3c0dcbc0d0023b08ba270ac3a844fd0b42b1&referrer=',
+    //     x_api_key: '',
+    //     x_recaptcha_key: "03AFcWeA5-HW3MltdzL93QHVeSXOQddVNo8z_kAHFCKKli66rmHtYDVHvIEhQ4wc10Q0Fc7wqKKcrl2YH6LO9VOpMV40jXB-y7OBfRnEqWoIOxiZaVXNqv1UE5KnNK6f3CofS6zV3WydiaJghe13qrO8Dx06of8nvBP_g6Mok-N22fVbNMc6OqWXjHDqbyj03g6q7drmqV6ubaeBq8LETkVYaioVdYIxzmof0vM-KwWcMppWRzOM5b0wWjsRHdPs65-e5ENr2adiwl0YJOZncMKDFEhqHplutHMOdPTLq2eubXhSKc5uBppE_A_X9ZJz-GG20eynSan1zX__rtfgo0z8OtIRMHQ7hCUeBE0Z5u2lfkGQfOHhEJabdUl3ZpDo0nzSE2WkyL_ZIpF901Gl4pI2b6Bl2_T3HnbzaG1Agl5KWGfLVBNctv4CCe8_h3fBoQffyNv5NbU_fWDwrIke6rZhU5-B7OhWispCtCILiezZtVfQO0RTq_q3FS8GRXFZ-UC5aAk5x18dVlz2ByO9_xXr9TM7tBKDEd3K46iAsZErgXp5nPuCyuySVB0ALzTkPr5r8XyCnNGlP7QV4X6-q6Nux-pQApYa6Tu0aWwMuFcW_9pdYFj-is3vcOfug9OkBPu7PUO6o59F-XVaCtf11JUrbpoBbU25QCR2Y3uNGm6SBn4b__phLZKZEKJ99OaVyqPyFdShjti9Qxrga7Lxq3Nt4CeKnr5S412iuyu5q5hA66rSHzSLSTuGwPpk9XXXwzjfTE3Gr6xeA_dSzkN8s3a7y8UA9VSGxeVx6haItKfANrViQUzbaB7Wf8S_rwixdGDosqWMStSHG6FfN5KiSw-n-OUQC8si5T2xADJ2zUHj9IJy-H6WLFO9FgmuJ2LHT3k9BKCqA-g9kLZQvKPeAVi7kjvBsqh-URXN94NjYF7DIquKK4D9JkN56iqpYsE4OPgHPiNfvt5MeU0YRZ3w-oIWl3Hc4vJLmQafdaTt4rKzEDdsaEaPqR3ozY4gofBjOo6IQnWKDhGrOnTVk7NqKMAyYikyxwTmswl1jtqOgvsecV1uxhxevBz_lWHYnSQ6D9oR_22pQmxqWy_FhKqM4YJGyRH7iJR22BoPGVi6JXfr9KOnsfADmemD92D1Sxqntut2dVoD5HIeve-kWF2kmHYJk9ZTCabxN6XeXy0bWFw6FUyKBJDFqrTjKyo-oIK-kjBiNPRtQUO-nz5rtEtT_aTmytH10TcY4KPZSl5alzdNvy7Gxca0qCsJPF_mgMmVqPTSvSbprxu1iNhOSfIi63KEKjXU-ZvWo0TfpMxoukk08rJJ2FFg5cmDoSPj8r0dj1gAI3ObPc5ZZAEBWUKh1EzE0Srm3xv68YjRx9BMq5aAEGK_4-QesuSTyX-na81AFXv_fvWKHlAEYsGdQ8g0Iost4ZR_IkvYl1O79P9gDsJWbB13fIQi7RQ29_Jxw9V5k4OlkTC4ZGZfomiBHXkR0VAL6U0bV0CqDTrqKa94L-mn53-s5A37YO8mWeEi6cjsOL9yEvEuOmLhWt4QonNqPHh_lwZj-wCfJ2roSRLmNOIBwQZoXvEGaRkCNak1s8oQoLhTDcWZASpleFxSf5MvRexMN2HdbTDeWCiRiSXoOorXImSx3zCWL2Fkk6m2HIpT0wSXXYUc2i7qvJEuRZfGfqn4rRimW1Kov7szG_UwoDBBlxj65tVRQP89Jb543P60sYYIHT4YDS_HJv8UQ4A5xd8SWJ6ZxgCZixY-FBkICz2WHHabFY34yZPqfncYZN1NsBEn8yymM5uMF_ic9DT6Q7gPBUVJRGzcowlcT6vWoJW-iiD4oR_vMOWE23iGZ16F7smM7e3XcHURdAsVXZUYb-Bdkq9tZeAgKsc6s9VCNMdrhssJfXR11s3uzOsODiO04e1M_T10KYnJ62PMcXhOky26GLyEOxu0e9X78sNlYiR3cwrD2IIlYTxfE"
+    // }, 
+    Victor: {
+        authorize: 'query_id=AAHnqZMFAwAAAOepkwXrP0mO&user=%7B%22id%22%3A6536014311%2C%22first_name%22%3A%22Victor%22%2C%22last_name%22%3A%22%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&auth_date=1730484184&hash=65642c5ae9cc5bf1327248ef0b73d36ef496fe2b23c8f6a5dce49d1e22818878&referrer=',
+        x_api_key: '',
+        x_recaptcha_key: "03AFcWeA6N93duUAWeCFFeYch6ZMDclgwBT6YrKMlfueDM0fm9ZO3DMNh4iBcCHfZVYwWTvPmQYh30UaFf156yosnZadwp51lQr103LmA_VKbu1-s09pB-HAoFQT1-8YHG1GIiMZOAaqC0CP9xWOJg0RIXKF7p220w9mBSC88PSqX3YgLL8ewXHVEAEk4_ih0ZM-r3Wpq7LR0-oraXQyNPUXb8KlQqrrMSCR9vjqHoPe3ZddVCpkGCDZ1GjRD9Lp8nfnJ5i-d2UO4Bb1q7wYd0Hdeyipdiax60b2loWaAP79C43h7uheNUYYOzbW3rUsWKKD7qKZlvjPAMPrCQoSKpI8xJFPifmxebseVeUMqXEgZzmVS-EaX2KcrEjI39ypLhjrvkaqLOq8vHAgWF3wD8iEWxxE1yMXFcM0uypYgprjtnHitwy4ooRnSmazMVeqrONGvrgncS_hAo8ODu-la5KTodCtFIZi86LEFO7G4YSXj4kUHCmIgOa64G1MeVdP0dQWeGPQWvVZesUPP4Bd7ajWRiUkAVzoCoUHA8aHl3JmPGU_IgXq9bvqFFxjrLhhgxhEXrvKkO9xl1ShCJmI20xROmRP-maX1xnLCmPcZ9LeV6jDtwjIY8sdQbwMziYSv805iMGhCRwKxIccDa-HxM_iXZiFNJRGDgWiaD0qZ8DhW-hgI2K--D50VqhlCWIUG1olM265iiGQ549dtyxsZuHZQ1A2rlXBTZLb5cT90PcGTtrZkJ_OZAZ0aJQYjsmT3Q6UXTMrgg89Rzx4cx8alhNoBBMiz5-qbRTHYogl6QFMzguwBSW8TYKLN9nJEOts_SkaY3neZy7yxTNlOVWVBW43xj8RcGMKEDu6NBPvs-Xw6f2cjWKJxpwmERZ39Nmxkkqkved9HbXtBYTWdZMKWfPTTiKqQmQV362ViS8dIwQjHZOYfxQ3QEC1T1hAS_aBlHyTAoCdAly18FRzDAxqScABgBZgFjKoZWaBWtXui4-UI6Jfc7waJeNhd0yFI95yPQ1T-wYkhEnbnvesDG5BAhcTH_Aff2xIV9IGO6UmLf-CumqYRT2EMdXQW-qkwRvPG2RddEoYBIxQuERIwKiLqUobb2dTW1ApZKL1-m0Q2Fr0Xf9Q7ZwgzYdhZJLO5933TXhav4j0d5YQB8PuR-99r0CJkCILH7Zyj8CtTXZJSEfOPoDUik7MDkMzujd5JmW5K7mwA4-F6LHgarJBSul4c9c_iD4QekflU3fmryIpVMsUnvzL_dfhXeLrucHfD_i-EBoCmOSwpVuL57OdDqkQpqdNDaSscy48Xssu3rITIXK1s4PJZFkrByomYOYyKvf0XHLe_fB7WOzh_TfkKcYe8iACjvoTlw9fkgl7zZB69ZpNtyhYvHXQbt00cszE9W-oLQfaB-oQX3HJ70A2jmGURxS0td7BWSck4DFMr-dPlUJjDYzr1bVHVdlLkxK-GqSudoHeHBI0VpFkZo01JbSAmqy_WArwpvHqjcPOkEnTqdQRAODOCkg_mQNMOSf2kvL_JSmHSz9XJknFRiTTFYOP2Jem23a2n9ohgIuPbZEbFpouuj492lbVKeeX2lqCZ6NiYa7KWD82EHqaGNqdLr_RmdoZVZmAP7Syi6xvNaHiDegnTdZTIozR2kVgftrG0smdMzu6J7MgGMmoVCm2iN5-CyH85RqIv-YiuTH3N0Mev24ZIh8o484VD_JWcM2r5Zn0TcvigJyes__djF68Bf6PIL_4VWiY5gJpZUv6Qcgx1iP7etKLLqBSUtizz-OZoyTCSQGYXPs-g-WLtbGbFyq4ivlN5L4xyNgNtA_rmbZvXvcyg7KwJeMRA9gYQ4zv_ajNJ9kwb5eNEgDR1P_WkZYkIg1Wm7MpnA-2phmLwDizGhjN6TeMAbjPNOQIdq-OJI6JP6Tevsb6SE0QArG_qFVCNO7ViZv9cfJO43fYle2SQL8iw_ar-ymmxpzPI"
     }
 }
 
@@ -25,7 +57,8 @@ async function getAuthorize(params) {
         .then((response) => response.json())
         .then((result) => {
             accessToken = result.access_token;
-            console.log("Access Token:", accessToken);
+            debug && console.log("Result getAuthorize :", result);
+            debug && console.log("Access Token:", accessToken);
 
         })
         .catch((error) => console.error(error));
@@ -33,36 +66,204 @@ async function getAuthorize(params) {
     return accessToken;
 }
 
-async function tap(params) {
-    const myHeaders = new Headers();
-    myHeaders.append("x-api-key", `${params}`);
-    myHeaders.append("Content-Type", "application/json");
+async function getData(nameUser) {
+    const accessToken = await getAuthorize(users[nameUser].authorize);
 
-    const raw = JSON.stringify({
-        "count": 1000
-    });
-
-    const requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow"
-    };
-
-    fetch("https://backend.babydogepawsbot.com/mine", requestOptions)
-        .then((response) => response.text())
-        .then((result) => console.log("tap OK!"))
-        .catch((error) => console.error(error));
+    return accessToken;
 }
 
-async function getData(user) {
-    const accessToken = await getAuthorize(user);
-    tap(accessToken);
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-//getData(users.AXL.authorize);
+async function tap(nameUser) {
 
-setInterval(() => {
-    getData(users.AXL.authorize);
+    async function postTap(nameUser) {
+        users[nameUser].x_api_key = await getData(nameUser);
 
-}, 1000 * 60 * 5)
+        const myHeaders = new Headers();
+        myHeaders.append("x-api-key", `${users[nameUser].x_api_key}`);
+        myHeaders.append("Content-Type", "application/json");
+
+        const raw = JSON.stringify({
+            "count": 1000
+        });
+
+        const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow"
+        };
+
+        fetch("https://backend.babydogepawsbot.com/mine", requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                console.log(`${nameUser} postTap OK!`)
+                setInterval(() => {
+                    postTap(nameUser);
+                }, 1000 * 60 * 5) // Повтор коду через 5 хвилин
+            })
+            .catch((error) => console.error(error));
+    }
+
+    postTap(nameUser);
+
+}
+
+async function upgradeCards(nameUser) { 
+
+
+
+    let levelCardUpgrade = 20;
+    async function repeatUpgradeCards(nameUser) {
+
+        users[nameUser].x_api_key = await getData(nameUser);
+
+        const myHeaders = new Headers();
+        myHeaders.append("x-api-key", `${users[nameUser].x_api_key}`);
+
+        const requestOptions = {
+            method: "GET",
+            headers: myHeaders,
+            redirect: "follow"
+        };
+
+        fetch("https://backend.babydogepawsbot.com/cards", requestOptions)
+            .then((response) => response.json())
+            .then((result) => {
+
+                if(result.message) {
+                    console.log(`result.message = ${result.message}`)
+                    return;
+                }
+
+                debug && console.log(`upgradeCards GET cards result = \n`)
+                debug && console.log(result)
+                const allCards = result.flatMap(category => category.cards);
+
+
+                // Фильтрация объектов, где isAvailable равно true
+                const availableItems = allCards.filter(item => item.is_available);
+
+
+
+                // Сортировка по свойству farming_upgrade в порядке убывания
+                const sortedItems = availableItems.sort((a, b) => b.farming_upgrade - a.farming_upgrade);
+
+                let upgradeCardsGet10 = false;
+                let filteredItems;
+                do {
+                    filteredItems = sortedItems.filter(item => item.cur_level <= levelCardUpgrade);
+
+                    if (filteredItems.length >= 10) {
+                        upgradeCardsGet10 = true;
+                        debug && console.log('Кількість елементів більше 10, тому продовжуємо виконання коду...')
+                        break;
+                    }
+                    debug && console.log('Кількість елементів меньше 10, тому збільшуємо умову рівня для покращених карт...')
+                    levelCardUpgrade++;
+                    delay(1000); // Затримка в 1 секунду
+                }
+                while (!upgradeCardsGet10)
+                // Фильтрация объектов, где level не больше 15
+
+                const sortedCards = filteredItems.sort((a, b) => (b.profitPerHourDelta / b.upgrade_cost) - (a.profitPerHourDelta / a.upgrade_cost))
+
+                // Извлечение первых 10 объектов из отфильтрованного массива
+                const top10FilteredItems = sortedCards.slice(0, 10);
+
+
+                // console.log(`top10FilteredItems : \n`)
+                // console.log(top10FilteredItems)
+                // Пример URL для POST-запроса
+
+
+                // Функция для выполнения POST-запроса
+                const postObject = async (obj) => {
+                    let objID = obj.id;
+                    const myHeaders = new Headers();
+                    myHeaders.append("x-api-key", `${users[nameUser].x_api_key}`);
+                    myHeaders.append("Content-Type", "application/json");
+
+                    const raw = JSON.stringify({
+                        "id": objID
+                    });
+
+                    const requestOptions = {
+                        method: "POST",
+                        headers: myHeaders,
+                        body: raw,
+                        redirect: "follow"
+                    };
+
+                    fetch("https://backend.babydogepawsbot.com/cards", requestOptions) // Тут зупинився, зупинився на тому щоб дізнатись результат покращення картки, щоб потім по її ID дізнатись скільки часу в неї триває покращення
+                        .then((response) => response.json())
+                        .then((result) => {
+                            if(result.message) {
+                                console.log(`result.message = ${result.message}`)
+                                return;
+                            }
+                            debug && console.log(`upgradeCards POST cards result = \n `)
+                            debug && console.log(result)
+                            const allCardsresult = result.cards.flatMap(category => category.cards);
+
+
+                            // Фильтрация объектов, где isAvailable равно true
+                            const availableItem = allCardsresult.filter(item => item.id === objID);
+
+                            console.log("Покращена картка : ")
+                            debug && console.log(availableItem)
+
+
+
+
+                            if (availableItem[0].requirement && availableItem[0].requirement.required_value && obj.cur_level < levelCardUpgrade) {
+
+                                const timestampMs = Math.floor(Math.abs(availableItem[0].requirement.required_value - Date.now()) / 1000) + 1;
+
+                                console.log(`Картка ${availableItem[0].name} буде покращена знову через ${timestampMs} секунд.`)
+                                debug && console.log(timestampMs)
+
+                                setTimeout(() => {
+                                    postObject(availableItem[0]);
+                                }, 1000 * timestampMs);
+                            }
+                        })
+                        .catch((error) => console.error(error));
+
+                    return obj;
+                };
+
+                // Основная функция для отправки POST-запросов для каждого объекта
+                const sendPostRequests = async (items) => {
+                    const results = await Promise.all(items.map(postObject));
+                    console.log('All POST requests completed');
+                    return results;
+                };
+
+                // Отправка POST-запросов
+                sendPostRequests(top10FilteredItems)
+                    .then(results => {
+                        //console.log('Results:', results);
+                    });
+
+            })
+            .catch((error) => console.error(error));
+
+        console.log(`${nameUser} repeatUpgradeCards OK!`)
+        setTimeout(() => {
+            repeatUpgradeCards(nameUser);
+        }, 60000 * 30)
+    }
+
+
+
+    repeatUpgradeCards(nameUser);
+}
+
+
+Object.keys(users).forEach(async name => {
+    await tap(name);
+    await upgradeCards(name);
+});
