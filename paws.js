@@ -29,7 +29,7 @@ let users = {
         authorize: 'query_id=AAFNP8soAAAAAE0_yyiM5pBM&user=%7B%22id%22%3A684408653%2C%22first_name%22%3A%22AXL%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22AXL_SL%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&auth_date=1730440649&hash=f921f135cecbb54a897cefd665ca3c0dcbc0d0023b08ba270ac3a844fd0b42b1&referrer=',
         x_api_key: '',
         x_recaptcha_key: "03AFcWeA5-HW3MltdzL93QHVeSXOQddVNo8z_kAHFCKKli66rmHtYDVHvIEhQ4wc10Q0Fc7wqKKcrl2YH6LO9VOpMV40jXB-y7OBfRnEqWoIOxiZaVXNqv1UE5KnNK6f3CofS6zV3WydiaJghe13qrO8Dx06of8nvBP_g6Mok-N22fVbNMc6OqWXjHDqbyj03g6q7drmqV6ubaeBq8LETkVYaioVdYIxzmof0vM-KwWcMppWRzOM5b0wWjsRHdPs65-e5ENr2adiwl0YJOZncMKDFEhqHplutHMOdPTLq2eubXhSKc5uBppE_A_X9ZJz-GG20eynSan1zX__rtfgo0z8OtIRMHQ7hCUeBE0Z5u2lfkGQfOHhEJabdUl3ZpDo0nzSE2WkyL_ZIpF901Gl4pI2b6Bl2_T3HnbzaG1Agl5KWGfLVBNctv4CCe8_h3fBoQffyNv5NbU_fWDwrIke6rZhU5-B7OhWispCtCILiezZtVfQO0RTq_q3FS8GRXFZ-UC5aAk5x18dVlz2ByO9_xXr9TM7tBKDEd3K46iAsZErgXp5nPuCyuySVB0ALzTkPr5r8XyCnNGlP7QV4X6-q6Nux-pQApYa6Tu0aWwMuFcW_9pdYFj-is3vcOfug9OkBPu7PUO6o59F-XVaCtf11JUrbpoBbU25QCR2Y3uNGm6SBn4b__phLZKZEKJ99OaVyqPyFdShjti9Qxrga7Lxq3Nt4CeKnr5S412iuyu5q5hA66rSHzSLSTuGwPpk9XXXwzjfTE3Gr6xeA_dSzkN8s3a7y8UA9VSGxeVx6haItKfANrViQUzbaB7Wf8S_rwixdGDosqWMStSHG6FfN5KiSw-n-OUQC8si5T2xADJ2zUHj9IJy-H6WLFO9FgmuJ2LHT3k9BKCqA-g9kLZQvKPeAVi7kjvBsqh-URXN94NjYF7DIquKK4D9JkN56iqpYsE4OPgHPiNfvt5MeU0YRZ3w-oIWl3Hc4vJLmQafdaTt4rKzEDdsaEaPqR3ozY4gofBjOo6IQnWKDhGrOnTVk7NqKMAyYikyxwTmswl1jtqOgvsecV1uxhxevBz_lWHYnSQ6D9oR_22pQmxqWy_FhKqM4YJGyRH7iJR22BoPGVi6JXfr9KOnsfADmemD92D1Sxqntut2dVoD5HIeve-kWF2kmHYJk9ZTCabxN6XeXy0bWFw6FUyKBJDFqrTjKyo-oIK-kjBiNPRtQUO-nz5rtEtT_aTmytH10TcY4KPZSl5alzdNvy7Gxca0qCsJPF_mgMmVqPTSvSbprxu1iNhOSfIi63KEKjXU-ZvWo0TfpMxoukk08rJJ2FFg5cmDoSPj8r0dj1gAI3ObPc5ZZAEBWUKh1EzE0Srm3xv68YjRx9BMq5aAEGK_4-QesuSTyX-na81AFXv_fvWKHlAEYsGdQ8g0Iost4ZR_IkvYl1O79P9gDsJWbB13fIQi7RQ29_Jxw9V5k4OlkTC4ZGZfomiBHXkR0VAL6U0bV0CqDTrqKa94L-mn53-s5A37YO8mWeEi6cjsOL9yEvEuOmLhWt4QonNqPHh_lwZj-wCfJ2roSRLmNOIBwQZoXvEGaRkCNak1s8oQoLhTDcWZASpleFxSf5MvRexMN2HdbTDeWCiRiSXoOorXImSx3zCWL2Fkk6m2HIpT0wSXXYUc2i7qvJEuRZfGfqn4rRimW1Kov7szG_UwoDBBlxj65tVRQP89Jb543P60sYYIHT4YDS_HJv8UQ4A5xd8SWJ6ZxgCZixY-FBkICz2WHHabFY34yZPqfncYZN1NsBEn8yymM5uMF_ic9DT6Q7gPBUVJRGzcowlcT6vWoJW-iiD4oR_vMOWE23iGZ16F7smM7e3XcHURdAsVXZUYb-Bdkq9tZeAgKsc6s9VCNMdrhssJfXR11s3uzOsODiO04e1M_T10KYnJ62PMcXhOky26GLyEOxu0e9X78sNlYiR3cwrD2IIlYTxfE"
-    }, 
+    },
     Victor: {
         authorize: 'query_id=AAHnqZMFAwAAAOepkwXrP0mO&user=%7B%22id%22%3A6536014311%2C%22first_name%22%3A%22Victor%22%2C%22last_name%22%3A%22%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&auth_date=1730484184&hash=65642c5ae9cc5bf1327248ef0b73d36ef496fe2b23c8f6a5dce49d1e22818878&referrer=',
         x_api_key: '',
@@ -116,7 +116,7 @@ async function tap(nameUser) {
 
 }
 
-async function upgradeCards(nameUser) { 
+async function upgradeCards(nameUser) {
 
 
 
@@ -138,7 +138,7 @@ async function upgradeCards(nameUser) {
             .then((response) => response.json())
             .then((result) => {
 
-                if(result.message) {
+                if (result.message) {
                     console.log(`result.message = ${result.message}`)
                     return;
                 }
@@ -205,7 +205,7 @@ async function upgradeCards(nameUser) {
                     fetch("https://backend.babydogepawsbot.com/cards", requestOptions) // Тут зупинився, зупинився на тому щоб дізнатись результат покращення картки, щоб потім по її ID дізнатись скільки часу в неї триває покращення
                         .then((response) => response.json())
                         .then((result) => {
-                            if(result.message) {
+                            if (result.message) {
                                 console.log(`result.message = ${result.message}`)
                                 return;
                             }
@@ -267,8 +267,31 @@ async function upgradeCards(nameUser) {
     repeatUpgradeCards(nameUser);
 }
 
+async function getCoin(nameUser) {
+
+    users[nameUser].x_api_key = await getData(nameUser);
+
+    const myHeaders = new Headers();
+    myHeaders.append("x-api-key", users[nameUser].x_api_key);
+
+    const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow"
+    };
+
+    fetch("https://backend.babydogepawsbot.com/getMe", requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+            setTimeout(()=> {
+                getCoin(nameUser);
+            }, 1000 * 60 * 60 * 1)
+        })
+        .catch((error) => console.error(error));
+}
 
 Object.keys(users).forEach(async name => {
     await tap(name);
     await upgradeCards(name);
+    await getCoin(name);
 });
