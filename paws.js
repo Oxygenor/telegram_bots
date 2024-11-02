@@ -291,9 +291,9 @@ async function getCoin(nameUser) {
 }
 
 Object.keys(users).forEach(async name => {
-    await tap(name);
-    await delay(2000)
-    await upgradeCards(name);
-    await delay(2000)
-    await getCoin(name);
+     tap(name);
+    
+     upgradeCards(name);
+   
+     getCoin(name);
 });
